@@ -43,6 +43,11 @@ private:
 
 };
 
+void myVector::chk_n_alloc(){
+    if (first_free >= cap){
+        reallocate();
+    }
+}
 
 void myVector::push_back(const data_t & __data){
     chk_n_alloc();
